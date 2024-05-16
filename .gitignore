@@ -4,3 +4,5 @@ mingw64
 .git
 .codelite
 build-Debug
+*/.codelite
+*/build-Debug
