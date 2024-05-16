@@ -2,3 +2,5 @@ SDL2
 mingw64
 .vscode
 .git
+.codelite
+build-Debug
