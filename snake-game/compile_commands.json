@@ -1,0 +1,5 @@
+[{
+  "file": "D:\\cppprojects\\snake-game\\snake-game\\main.cpp",
+  "directory": "D:\\cppprojects\\snake-game\\snake-game",
+  "command": "D:/cppprojects/mingw64/bin/g++.exe -c D:\\cppprojects\\snake-game\\snake-game\\main.cpp -o D:\\cppprojects\\snake-game\\snake-game\\main.cpp.o -target x86_64-w64-mingw32 -ID:\\cppprojects\\mingw64\\include\\c++\\13.2.0 -ID:\\cppprojects\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -ID:\\cppprojects\\mingw64\\include\\c++\\13.2.0\\backward -ID:\\cppprojects\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -ID:\\cppprojects\\mingw64\\include -ID:\\cppprojects\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -ID:\\cppprojects\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }]
