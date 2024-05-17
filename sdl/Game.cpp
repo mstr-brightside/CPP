@@ -1,13 +1,9 @@
 #include "Game.hpp"
 #include <iostream>
 
-Game::Game() {
+Game::Game() {};
 
-};
-
-Game::~Game() {
-
-};
+Game::~Game() {};
 
 void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen) {
 
@@ -20,13 +16,11 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     std::cout << "Subsystems initialized!" << std::endl;
 
     window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
-
     if (window) {
       std::cout << "Window created!" << std::endl;
     }
 
     renderer = SDL_CreateRenderer(window, -1, 0);
-
     if (renderer) {
       SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
       std::cout << "Renderer created!" << std::endl;
@@ -34,7 +28,6 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 
     isRunning = true;
   } else {
-
     isRunning = false;
   }
 };
@@ -54,12 +47,12 @@ void Game::handleEvent() {
 };
 
 void Game::update() {
-
+  cnt++;
+  std::cout << cnt << std::endl;
 };
 
 void Game::render() {
   SDL_RenderClear(renderer);
-
   SDL_RenderPresent(renderer);
 };
 
