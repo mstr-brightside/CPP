@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL2_core/SDL.h>
 #include <iostream>
 #include "Game.hpp"
 
