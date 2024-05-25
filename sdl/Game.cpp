@@ -1,9 +1,10 @@
 #include "Game.hpp"
 #include "TextureManager.hpp"
+#include "GameObject.hpp"
 #include <iostream>
 
-SDL_Texture *playerTex;
-SDL_Rect srcR, destR;
+GameObject *player;
+GameObject *enemy;
 
 Game::Game() {};
 Game::~Game() {};
@@ -34,11 +35,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     isRunning = false;
   }
 
-  // SDL_Surface *tmpSurface = IMG_Load("assets/player.png");
-  // playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-  // SDL_FreeSurface(tmpSurface);
-
-  playerTex = TextureManager::LoadTexture("assets/player.png", renderer);
+  player = new GameObject("assets/player.png", renderer, 0, 0);
+  enemy = new GameObject("assets/enemy.png", renderer, 50, 50);
 };
 
 void Game::handleEvent() {
@@ -56,19 +54,14 @@ void Game::handleEvent() {
 };
 
 void Game::update() {
-  cnt++;
-
-  destR.h = 32;
-  destR.w = 32;
-
-  destR.x = cnt;
-
-  std::cout << cnt << std::endl;
+  player->Update();
+  enemy->Update();
 };
 
 void Game::render() {
   SDL_RenderClear(renderer);
-  SDL_RenderCopy(renderer, playerTex, NULL, &destR);
+  player->Render();
+  enemy->Render();
   SDL_RenderPresent(renderer);
 };
 
